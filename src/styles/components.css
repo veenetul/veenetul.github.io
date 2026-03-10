@@ -235,7 +235,7 @@ body.overlay-left  .overlay-header { padding-right: 3.25rem; }
   padding: .45rem .65rem;
   border: none;
 
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-sm, 8px);
   cursor: pointer;
 
   transition: background-color .1s;
