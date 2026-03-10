@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VNlab Portfolio — Home</title>
+
   <link rel="stylesheet" href="/src/styles/base.css" />
   <link rel="stylesheet" href="/src/styles/layout.css" />
   <link rel="stylesheet" href="/src/styles/components.css" />
@@ -10,8 +14,6 @@
 </head>
 
 <body class="overlay-right">
-
-  <main class="page">
 
     <!-- Hero Section -->
     <header class="hero">
@@ -26,6 +28,7 @@
     <section class="video-cv" aria-label="Video introduction">
       <div class="video-container">
         <h2>About Me — Video Introduction</h2>
+        <!-- YouTube Embed Example -->
         <iframe 
           width="100%" 
           height="400" 
@@ -35,12 +38,13 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
           allowfullscreen>
         </iframe>
+        <!-- Alternative: For Kaltura, replace the iframe src with your Kaltura embed code -->
       </div>
     </section>
 
     <!-- Current Projects Quick View -->
     <section class="shortcuts" aria-label="Featured projects">
-      <h2>Current Projects</h2>
+      <h2 style="grid-column: 1 / -1; margin: 0; padding: 0 var(--gap);">Current Projects</h2>
 
       <a href="/src/pages/projects.html" class="shortcut-card">
         <div class="shortcut-body">
@@ -55,11 +59,12 @@
           <p>A showcase of one of my recent work. Click to see more.</p>
         </div>
       </a>
+
     </section>
 
-    <!-- Professional Background -->
+    <!-- CV Sections Quick Links -->
     <section class="shortcuts" aria-label="CV sections">
-      <h2>Professional Background</h2>
+      <h2 style="grid-column: 1 / -1; margin: 0; padding: 0 var(--gap);">Professional Background</h2>
 
       <a href="/src/pages/skills.html" class="shortcut-card">
         <div class="shortcut-body">
@@ -81,20 +86,20 @@
           <p>My professional history and past roles.</p>
         </div>
       </a>
+
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Quick Link -->
     <section class="shortcuts" aria-label="Contact">
-      <h2>Get in Touch</h2>
 
       <a href="/src/pages/contacts.html" class="shortcut-card">
         <div class="shortcut-body">
+          <h2>Get in Touch</h2>
           <p>Contact information and ways to reach me.</p>
         </div>
       </a>
-    </section>
 
-  </main>
+    </section>
 
   <!-- Menu Nappi -->
   <button class="fab" id="fab" aria-label="Open menu" aria-expanded="false">

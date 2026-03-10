@@ -97,8 +97,8 @@ body {
   bottom: 18px;
   right: 18px;
   left: auto;
-  width: 56px;
-  height: 56px;
+  width: clamp(48px, 12vw, 56px);
+  height: clamp(48px, 12vw, 56px);
   border-radius: 50%;
   background: #2a2a2a;
   color: var(--on);
