@@ -73,3 +73,64 @@
   }
   .shortcuts { overflow: hidden; }
 }
+
+/* Contact section centered styling on desktop */
+@media (min-width: 720px) {
+  .contact-section .shortcut-card {
+    float: none;
+    margin: 0 auto 1rem;
+    width: 100%;
+    max-width: 360px;
+  }
+  .contact-section {
+    text-align: center;
+  }
+  .contact-section h2 {
+    text-align: center;
+  }
+  .contact-section .shortcut-body {
+    text-align: center;
+  }
+}
+
+/* Hide contact cards on mobile (under 720px) */
+@media (max-width: 719px) {
+  .contact-section {
+    display: none;
+  }
+}
+
+/* Desktop-wide centering for all pages */
+@media (min-width: 720px) {
+  .hero {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .video-cv {
+    text-align: center;
+  }
+  
+  .video-container {
+    margin: 0 auto;
+  }
+  
+  .shortcuts {
+    text-align: center;
+  }
+  
+  .shortcuts h2 {
+    text-align: center;
+  }
+  
+  .shortcuts .shortcut-body {
+    text-align: center;
+  }
+  
+  .shortcuts .shortcut-body h2,
+  .shortcuts .shortcut-body h3,
+  .shortcuts .shortcut-body p {
+    text-align: center;
+  }
+}
