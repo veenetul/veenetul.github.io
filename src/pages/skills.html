@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script type="module" src="../js/main.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skills (Osaaminen) — VNlab Portfolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../styles/base.css" />
+  <link rel="stylesheet" href="../styles/theme.css" />
+  <link rel="stylesheet" href="../styles/layout.css" />
+  <link rel="stylesheet" href="../styles/components.css" />
+  <link rel="stylesheet" href="../styles/utilities.css" />
+</head>
+
+<body class="overlay-right">
+
+  <!-- Skills Page -->
+  <main class="page">
+    <header class="hero">
+      <h1 class="hero-title">Skills & Expertise</h1>
+      <p class="hero-desc">
+        A summary of the technical and professional skills I've developed. These are areas where I can provide value and solve problems.
+      </p>
+    </header>
+
+    <!-- Skills Cards -->
+    <section class="shortcuts" aria-label="Skills list">
+
+      <div class="shortcut-card">
+        <div class="shortcut-body">
+          <h2>Web Development</h2>
+          <p>HTML, CSS, JavaScript. Building responsive, accessible websites from the ground up.</p>
+        </div>
+      </div>
+
+      <div class="shortcut-card">
+        <div class="shortcut-body">
+          <h2>Front-End Development</h2>
+          <p>React, Vue, or other frameworks. Creating interactive user interfaces and single-page applications.</p>
+        </div>
+      </div>
+
+      <div class="shortcut-card">
+        <div class="shortcut-body">
+          <h2>Back-End Development</h2>
+          <p>Server-side logic, databases, and APIs. Building the systems that power web applications.</p>
+        </div>
+      </div>
+
+      <div class="shortcut-card">
+        <div class="shortcut-body">
+          <h2>Problem Solving</h2>
+          <p>Breaking down complex problems and finding elegant solutions. Debugging and optimization.</p>
+        </div>
+      </div>
+
+      <div class="shortcut-card">
+        <div class="shortcut-body">
+          <h2>Communication</h2>
+          <p>Clear documentation, collaboration with teams, and explaining technical concepts in simple terms.</p>
+        </div>
+      </div>
+
+      <div class="shortcut-card">
+        <div class="shortcut-body">
+          <h2>Version Control</h2>
+          <p>Git and GitHub. Managing code, collaborating with others, and maintaining project history.</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Menu Button -->
+  <button class="fab" id="fab" aria-label="Open menu" aria-expanded="false">
+    <span class="fab-icon"><span></span><span></span><span></span></span>
+  </button>
+
+  <!-- Menu -->
+  <div class="overlay" id="overlay">
+    <div class="overlay-dead" id="overlayDead"></div>
+
+    <div class="overlay-surface" role="dialog" aria-modal="true">
+      <header class="overlay-header">
+        <h1>Main Menu</h1>
+
+        <button class="switch-side" id="switchSideBtn" aria-label="Switch drawer side">
+          ⇆
+        </button>
+      </header>
+
+      <nav class="overlay-nav">
+        <a href="../index.html">Home</a>
+        <a href="./projects.html">Current Projects</a>
+        <a href="./skills.html">Skills</a>
+        <a href="./education.html">Education</a>
+        <a href="./experience.html">Work Experience</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+
+      <footer class="overlay-footer">
+        <p class="temp-footer-note"></p>
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>

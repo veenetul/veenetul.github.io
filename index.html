@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VNlab Portfolio — Home</title>
+
+  <link rel="stylesheet" href="/src/styles/base.css" />
+  <link rel="stylesheet" href="/src/styles/layout.css" />
+  <link rel="stylesheet" href="/src/styles/components.css" />
+  <link rel="stylesheet" href="/src/styles/utilities.css" />
+
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body class="overlay-right">
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <h1 class="hero-title">VNlab Portfolio</h1>
+      <p class="hero-desc">
+        Welcome to my portfolio. I'm a developer passionate about creating clean, user-friendly digital experiences. 
+        This site showcases my projects, skills, and professional journey.
+      </p>
+    </header>
+
+    <!-- Video CV Section -->
+    <section class="video-cv" aria-label="Video introduction">
+      <div class="video-container">
+        <h2>About Me — Video Introduction</h2>
+        <!-- YouTube Embed Example -->
+        <iframe 
+          width="100%" 
+          height="400" 
+          src="https://www.youtube.com/embed/your-video-id" 
+          title="Video CV" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+        <!-- Alternative: For Kaltura, replace the iframe src with your Kaltura embed code -->
+      </div>
+    </section>
+
+    <!-- Current Projects Quick View -->
+    <section class="shortcuts" aria-label="Featured projects">
+      <h2 style="grid-column: 1 / -1; margin: 0; padding: 0 var(--gap);">Current Projects</h2>
+
+      <a href="/src/pages/projects.html" class="shortcut-card">
+        <div class="shortcut-body">
+          <h3>View All Projects</h3>
+          <p>Browse all my current and past projects with detailed descriptions.</p>
+        </div>
+      </a>
+
+      <a href="/src/pages/projects.html" class="shortcut-card">
+        <div class="shortcut-body">
+          <h3>Featured Project</h3>
+          <p>A showcase of one of my recent work. Click to see more.</p>
+        </div>
+      </a>
+
+    </section>
+
+    <!-- CV Sections Quick Links -->
+    <section class="shortcuts" aria-label="CV sections">
+      <h2 style="grid-column: 1 / -1; margin: 0; padding: 0 var(--gap);">Professional Background</h2>
+
+      <a href="/src/pages/skills.html" class="shortcut-card">
+        <div class="shortcut-body">
+          <h2>Skills & Expertise</h2>
+          <p>Technical skills and professional competencies I've developed.</p>
+        </div>
+      </a>
+
+      <a href="/src/pages/education.html" class="shortcut-card">
+        <div class="shortcut-body">
+          <h2>Education</h2>
+          <p>My educational background and formal training.</p>
+        </div>
+      </a>
+
+      <a href="/src/pages/experience.html" class="shortcut-card">
+        <div class="shortcut-body">
+          <h2>Work Experience</h2>
+          <p>My professional history and past roles.</p>
+        </div>
+      </a>
+
+    </section>
+
+    <!-- Contact Quick Link -->
+    <section class="shortcuts" aria-label="Contact">
+
+      <a href="/src/pages/contact.html" class="shortcut-card">
+        <div class="shortcut-body">
+          <h2>Get in Touch</h2>
+          <p>Contact information and ways to reach me.</p>
+        </div>
+      </a>
+
+    </section>
+
+  <!-- Menu Nappi -->
+  <button class="fab" id="fab" aria-label="Open menu" aria-expanded="false">
+    <span class="fab-icon"><span></span><span></span><span></span></span>
+  </button>
+
+  <!-- Menu -->
+  <div class="overlay" id="overlay">
+    <!-- Menu sulku -->
+    <div class="overlay-dead" id="overlayDead"></div>
+
+    <!-- Sliding panel -->
+    <div class="overlay-surface" role="dialog" aria-modal="true">
+      <header class="overlay-header">
+        <h1>Main Menu</h1>
+
+        <!-- Puolen Vaihto Nappi -->
+        <button class="switch-side" id="switchSideBtn" aria-label="Switch drawer side">
+          ⇆
+        </button>
+      </header>
+
+      <nav class="overlay-nav">
+        <a href="/">Home</a>
+        <a href="/src/pages/projects.html">Current Projects</a>
+        <a href="/src/pages/skills.html">Skills</a>
+        <a href="/src/pages/education.html">Education</a>
+        <a href="/src/pages/experience.html">Work Experience</a>
+        <a href="/src/pages/contact.html">Contact</a>
+      </nav>
+
+      <footer class="overlay-footer">
+        <p class="temp-footer-note"></p>
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>

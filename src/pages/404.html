@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script type="module" src="../js/main.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Page Not Found — VNlab Portfolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../styles/base.css" />
+  <link rel="stylesheet" href="../styles/theme.css" />
+  <link rel="stylesheet" href="../styles/layout.css" />
+  <link rel="stylesheet" href="../styles/components.css" />
+  <link rel="stylesheet" href="../styles/utilities.css" />
+
+  <style>
+    .error-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100dvh;
+      padding: var(--gap);
+      text-align: center;
+    }
+
+    .error-code {
+      font-size: clamp(3rem, 15vw, 8rem);
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0;
+      line-height: 1;
+    }
+
+    .error-title {
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      font-weight: 600;
+      margin: 1rem 0;
+      color: var(--text);
+    }
+
+    .error-desc {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 1rem 0 2rem;
+    }
+
+    .error-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .error-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--primary);
+      color: #1f1f1f;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+      cursor: pointer;
+    }
+
+    .error-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(244, 187, 255, 0.3);
+    }
+
+    .error-button-secondary {
+      background: #2a2a2a;
+      color: var(--text);
+    }
+
+    .error-button-secondary:hover {
+      background: #323232;
+    }
+  </style>
+</head>
+
+<body class="overlay-right">
+
+  <!-- 404 Error Page -->
+  <main class="page">
+    <div class="error-container">
+      <h1 class="error-code">404</h1>
+      <h2 class="error-title">Page Not Found</h2>
+      <p class="error-desc">
+        Sorry, the page you're looking for doesn't exist. It may have been moved, or you might have followed a broken link. Let me help you get back on track.
+      </p>
+
+      <div class="error-buttons">
+        <a href="../index.html" class="error-button">Back to Home</a>
+        <a href="../pages/contact.html" class="error-button error-button-secondary">Contact Me</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Menu Button -->
+  <button class="fab" id="fab" aria-label="Open menu" aria-expanded="false">
+    <span class="fab-icon"><span></span><span></span><span></span></span>
+  </button>
+
+  <!-- Menu -->
+  <div class="overlay" id="overlay">
+    <div class="overlay-dead" id="overlayDead"></div>
+
+    <div class="overlay-surface" role="dialog" aria-modal="true">
+      <header class="overlay-header">
+        <h1>Main Menu</h1>
+
+        <button class="switch-side" id="switchSideBtn" aria-label="Switch drawer side">
+          ⇆
+        </button>
+      </header>
+
+      <nav class="overlay-nav">
+        <a href="../index.html">Home</a>
+        <a href="../pages/projects.html">Current Projects</a>
+        <a href="../pages/skills.html">Skills</a>
+        <a href="../pages/education.html">Education</a>
+        <a href="../pages/experience.html">Work Experience</a>
+        <a href="../pages/contact.html">Contact</a>
+      </nav>
+
+      <footer class="overlay-footer">
+        <p class="temp-footer-note"></p>
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>

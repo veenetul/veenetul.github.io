@@ -1,0 +1,24 @@
+{
+  "name": "veenetul.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio sivulle html koodi ja sen tunkkaus osana DIG001IT1A-3074",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veenetul/veenetul.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/veenetul/veenetul.github.io/issues"
+  },
+  "homepage": "https://github.com/veenetul/veenetul.github.io#readme",
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}

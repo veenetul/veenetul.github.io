@@ -1,0 +1,269 @@
+/* global reset */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #111;
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+/* floating button */
+.fab {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #2a2a2a;
+  color: #eee;
+}
+
+.fab .bar {
+  display: block;
+  height: 2px;
+  background: currentColor;
+  margin: 5px 0;
+}
+
+
+.shortcut-card {
+  background: #2A2A2A;        
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  transition: transform .1s ease;
+}
+
+.shortcut-card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+
+  background: #262626;
+}
+
+@media (orientation: portrait) {
+  .shortcut-card img { aspect-ratio: 4/3; }
+}
+
+.shortcut-body {
+  padding: var(--gap);
+  background: #262626;
+  color: var(--on);
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+@media (hover:hover) {
+  .shortcut-card:hover {
+    transform: translateY(-1px);
+  }
+}
+
+.logo-card {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+
+  background: var(--primary);
+  color: #1F1F1F;
+  padding: .6rem .9rem;
+
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+
+  z-index: 60;
+}
+
+.logo-card svg {
+  width: 26px;
+  height: 26px;
+  fill: currentColor;
+}
+
+
+/* Menun Hampurilaisnappi */
+
+.fab {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #2a2a2a;
+  color: var(--on);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.fab-icon {
+    position: relative;
+    width: 24px;
+    height: 16px;
+}
+
+.fab-icon span {
+    position: absolute;
+    left: 0; right: 0;
+    height: 2px;
+    background: currentColor; 
+    border-radius: 1px;
+}
+
+.fab-icon span:nth-child(1) { top: 0; }
+.fab-icon span:nth-child(2) { top: 7px; }
+.fab-icon span:nth-child(3) { top: 14px; }
+
+/* Overlay */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity .18s ease;
+  z-index: 45;
+}
+
+.overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Dead-space: flat invisible click zone */
+.overlay-dead {
+  flex: 0 0 10vw;
+  min-width: 60px;
+  background: transparent;
+  cursor: pointer;
+}
+
+
+/* Sliding surface */
+.overlay-surface {
+  flex: 0 0 min(90vw, 560px);
+  height: 100dvh;
+
+  background: rgba(244, 187, 255, 0.12);
+  backdrop-filter: blur(12px);
+
+  border-radius: var(--radius);
+
+  display: flex;
+  flex-direction: column;
+
+  transform: translateX(110%);
+  transition: transform .20s ease;
+}
+
+/* Direction + rounding */
+body.overlay-right .overlay {
+  flex-direction: row;
+}
+body.overlay-left .overlay {
+  flex-direction: row-reverse;
+}
+
+body.overlay-right .overlay-surface {
+  border-top-left-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+}
+body.overlay-left .overlay-surface {
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+.overlay.open .overlay-surface {
+  transform: translateX(0);
+}
+
+@media (min-width:1024px){
+  .overlay-surface{ flex-basis: min(40vw, 640px); }
+}
+
+
+/* Overlay Header */
+
+.overlay-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  padding: 1rem 1.25rem .75rem;
+  color: var(--on);
+}
+
+body.overlay-right .overlay-header { padding-left: 3.25rem; }
+body.overlay-left  .overlay-header { padding-right: 3.25rem; }
+
+/* Side Switch */
+.switch-side {
+  position: absolute;
+  top: 10px;
+
+  background: var(--primary);  
+  color: #1F1F1F;
+  padding: .45rem .65rem;
+  border: none;
+
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+
+  transition: background-color .1s;
+}
+
+
+body.overlay-right .switch-side { left: 12px; right:auto; }
+body.overlay-left  .switch-side { right:12px; left:auto; }
+
+@media (hover:hover){
+  .switch-side:hover { background: #e1aef0; }
+}
+
+
+/* Overlay Navigation */
+
+.overlay-nav {
+  padding: .75rem;
+  display: grid;
+  gap: .25rem;
+}
+
+.overlay-item {
+  padding: .85rem 1rem;
+  border-radius: var(--radius-sm);
+
+  background: transparent;
+  color: var(--on);
+
+  transition: background-color .1s ease, transform .1s ease;
+}
+
+@media (hover:hover){
+  .overlay-item:hover {
+    background: #2F2F2F;
+    transform: translateX(1px);
+  }
+}
+
+
+/* Overlay Footer */
+
+.overlay-footer {
+  padding: 1rem 1.25rem 2rem;
+  color: var(--muted);
+  margin-top: auto;
+}

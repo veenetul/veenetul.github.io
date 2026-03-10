@@ -1,0 +1,67 @@
+/* Layout*/
+
+.page {
+  min-height: 100vh;
+}
+
+.hero {
+  padding: 2rem 1rem 1rem;
+  text-align: left;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.hero-desc {
+  margin-top: 0.75rem;
+  max-width: 650px;
+  color: #aaaaaa;
+}
+
+/* Video CV Section */
+.video-cv {
+  padding: 2rem 1rem;
+}
+
+.video-cv h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.video-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.video-container iframe {
+  border-radius: 12px;
+  display: block;
+}
+
+
+.shortcuts {
+  padding: 2rem 1rem 8rem;
+}
+
+.shortcuts h2 {
+  font-size: 1.3rem;
+  margin: 2rem 0 1rem 0;
+  font-weight: 600;
+}
+
+.shortcuts .shortcut-card {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 720px) {
+  .shortcuts .shortcut-card {
+    float: left;
+    width: 260px;
+    margin-right: 1rem;
+  }
+  .shortcuts { overflow: hidden; }
+}

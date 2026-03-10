@@ -1,0 +1,64 @@
+:root {
+  /* Colors */
+  --bg: #1f1f1f;
+  --text: #cfcfcf;
+  --on: #cfcfcf;
+  --muted: #aaaaaa;
+  --primary: #f4bbff;
+
+  /* Spacing */
+  --radius: 12px;
+  --gap: 1.25rem;
+
+  /* Typography */
+  --font-body: system-ui, Arial, sans-serif;
+  --font-size: 16px;
+}
+
+/* Make sizing consistent for all elements */
+* {
+  box-sizing: border-box;
+}
+
+html, body { 
+  height: 100%; 
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.45;
+}
+
+/* Remove default link styling */
+a { 
+  color: inherit; 
+  text-decoration: none; 
+}
+
+/* Make images responsive */
+img { 
+  max-width: 100%; 
+  display: block; 
+}
+
+/* Reset button styling */
+button { 
+  font: inherit; 
+  border: none; 
+  background: none; 
+}
+
+/* Remove focus outline */
+*:focus,
+*:focus-visible { 
+  outline: none; 
+}
+
+hr {
+  border: none;
+  margin: 0.75rem 0;
+}

@@ -1,0 +1,27 @@
+/* utilities */
+
+/* Helppokäyttösyys */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Flexbox keskitys */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Marginaalit */
+.mt-sm { margin-top: 0.5rem; }
+.mt-md { margin-top: 1rem; }
+.mt-lg { margin-top: 2rem; }
+
+
+.opacity-50 { opacity: 0.5; }
+.opacity-75 { opacity: 0.75; }

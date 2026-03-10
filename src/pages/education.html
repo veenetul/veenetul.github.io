@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script type="module" src="../js/main.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Education (Koulutus) — VNlab Portfolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../styles/base.css" />
+  <link rel="stylesheet" href="../styles/theme.css" />
+  <link rel="stylesheet" href="../styles/layout.css" />
+  <link rel="stylesheet" href="../styles/components.css" />
+  <link rel="stylesheet" href="../styles/utilities.css" />
+</head>
+
+<body class="overlay-right">
+
+  <!-- Education Page -->
+  <main class="page">
+    <header class="hero">
+      <h1 class="hero-title">Education & Learning</h1>
+      <p class="hero-desc">
+        My educational background and formal training. This includes degrees, certifications, and structured learning programs that shaped my foundational knowledge.
+      </p>
+    </header>
+
+    <!-- Education Cards -->
+    <section class="shortcuts" aria-label="Education list">
+
+      <div class="shortcut-card">
+        <div class="shortcut-body">
+          <h2>Degree Program Name</h2>
+          <p>Institution Name • Year Graduated. Summary of what you studied and key subjects covered.</p>
+        </div>
+      </div>
+
+      <div class="shortcut-card">
+        <div class="shortcut-body">
+          <h2>Certification or Course</h2>
+          <p>Course Provider • Year Completed. Description of the course content and skills gained.</p>
+        </div>
+      </div>
+
+      <div class="shortcut-card">
+        <div class="shortcut-body">
+          <h2>Online Learning</h2>
+          <p>Platform (e.g., Coursera, Udemy) • Year. Topics studied and any certificates earned.</p>
+        </div>
+      </div>
+
+      <div class="shortcut-card">
+        <div class="shortcut-body">
+          <h2>Workshop or Training</h2>
+          <p>Training Organization • Year. What you learned and how it applies to your work.</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Menu Button -->
+  <button class="fab" id="fab" aria-label="Open menu" aria-expanded="false">
+    <span class="fab-icon"><span></span><span></span><span></span></span>
+  </button>
+
+  <!-- Menu -->
+  <div class="overlay" id="overlay">
+    <div class="overlay-dead" id="overlayDead"></div>
+
+    <div class="overlay-surface" role="dialog" aria-modal="true">
+      <header class="overlay-header">
+        <h1>Main Menu</h1>
+
+        <button class="switch-side" id="switchSideBtn" aria-label="Switch drawer side">
+          ⇆
+        </button>
+      </header>
+
+      <nav class="overlay-nav">
+        <a href="../index.html">Home</a>
+        <a href="./projects.html">Current Projects</a>
+        <a href="./skills.html">Skills</a>
+        <a href="./education.html">Education</a>
+        <a href="./experience.html">Work Experience</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+
+      <footer class="overlay-footer">
+        <p class="temp-footer-note"></p>
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>
