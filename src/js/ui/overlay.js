@@ -19,8 +19,6 @@ export function initOverlay({ onOpen, onClose, onSideSwitch } = {}) {
     };
   }
 
-  console.log('overlay initialized');
-
   function isOpen() {
     return overlay.classList.contains('open');
   }
@@ -53,7 +51,6 @@ export function initOverlay({ onOpen, onClose, onSideSwitch } = {}) {
   }
 
   function toggle() {
-    console.log('overlay toggle called');
     isOpen() ? close() : open();
   }
 

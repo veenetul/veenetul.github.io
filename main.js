@@ -1,11 +1,4 @@
-// 1. IMPORT STYLES
-// This allows Vite to process, minify, and inject your CSS.
-import './src/styles/base.css';
-import './src/styles/layout.css';
-import './src/styles/components.css';
-import './src/styles/utilities.css';
-
-// 2. IMPORT UI LOGIC
+// Static HTML pages load CSS via <link>. Keep JS-only imports here.
 import { initOverlay } from './src/js/ui/overlay.js';
 import { initFab } from './src/js/ui/fab.js';
 import { loadSidePref, applySide } from './src/js/ui/sidePreference.js';
@@ -26,11 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     onClose: () => {
       document.body.classList.remove('overlay-open');
     },
-    onSideSwitch: (side) => {
-      // This runs whenever the user toggles the UI side
-      localStorage.setItem('overlaySide', side);
-      console.log(`UI switched to: ${side}`);
-    },
+    onSideSwitch: () => {},
   });
 
   // C. Connect the Floating Action Button to the Overlay
