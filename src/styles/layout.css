@@ -33,11 +33,19 @@
 }
 
 .video-container {
-  max-width: 800px;
-  margin: 0 auto;
+  width: min(100%, 560px);
+  margin: 0;
+  background: #262626;
+  border: 1px solid #333;
+  border-radius: var(--radius);
+  padding: 1rem;
 }
 
 .video-container iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
   border-radius: 12px;
   display: block;
 }
