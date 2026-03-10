@@ -140,10 +140,7 @@ body.overlay-left .fab {
 /* Overlay */
 
 .overlay {
-  --overlay-dead: clamp(36px, 8vw, 72px);
-  --overlay-gap: clamp(12px, 3vw, 22px);
-  --overlay-edge: clamp(10px, 2.6vw, 16px);
-  --overlay-top-bottom: clamp(10px, 2.8vw, 18px);
+  --overlay-dead: clamp(68px, 18vw, 96px);
 
   position: fixed;
   inset: 0;
@@ -171,15 +168,13 @@ body.overlay-left .fab {
 
 /* Sliding surface */
 .overlay-surface {
-  flex: 0 0 min(calc(100vw - var(--overlay-dead) - var(--overlay-gap) - var(--overlay-edge)), 500px);
-  height: calc(100dvh - (2 * var(--overlay-top-bottom)));
-  margin-top: var(--overlay-top-bottom);
-  margin-bottom: var(--overlay-top-bottom);
+  flex: 0 0 min(calc(100vw - var(--overlay-dead)), 420px);
+  height: 100dvh;
 
   background: rgba(244, 187, 255, 0.12);
   backdrop-filter: blur(12px);
 
-  border-radius: var(--radius);
+  border-radius: 0;
 
   display: flex;
   flex-direction: column;
@@ -189,23 +184,21 @@ body.overlay-left .fab {
 /* Direction + rounding */
 body.overlay-right .overlay {
   flex-direction: row;
+  justify-content: flex-end;
 }
 body.overlay-left .overlay {
   flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 
 body.overlay-right .overlay-surface {
   border-top-left-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
-  margin-left: var(--overlay-gap);
-  margin-right: var(--overlay-edge);
   transform: translateX(110%);
 }
 body.overlay-left .overlay-surface {
   border-top-right-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
-  margin-right: var(--overlay-gap);
-  margin-left: var(--overlay-edge);
   transform: translateX(-110%);
 }
 
