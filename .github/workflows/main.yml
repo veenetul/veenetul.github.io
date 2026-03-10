@@ -2,7 +2,7 @@ name: Deploy Portfolio
 
 on:
   push:
-    branches: ["main"] # Ensure this matches your default branch name
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -34,7 +34,6 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Vite builds the production site into the 'dist' folder by default
           path: './dist' 
 
       - name: Deploy to GitHub Pages
