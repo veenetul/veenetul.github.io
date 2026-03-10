@@ -1,20 +1,17 @@
 // 1. IMPORT STYLES
 // This allows Vite to process, minify, and inject your CSS.
-import './styles/base.css';
-import './styles/layout.css';
-import './styles/components.css';
-import './styles/utilities.css';
+import './src/styles/base.css';
+import './src/styles/layout.css';
+import './src/styles/components.css';
+import './src/styles/utilities.css';
 
 // 2. IMPORT UI LOGIC
-import { initOverlay } from './js/ui/overlay.js';
-import { initFab } from './js/ui/fab.js';
-import { loadSidePref, applySide } from './js/ui/sidePreference.js';
-
-console.log('main.js loaded');
+import { initOverlay } from './src/js/ui/overlay.js';
+import { initFab } from './src/js/ui/fab.js';
+import { loadSidePref, applySide } from './src/js/ui/sidePreference.js';
 
 // 3. INITIALIZE ON LOAD
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOMContentLoaded');
   
   // A. Handle User Side Preference (Left/Right)
   const savedSide = loadSidePref();
@@ -39,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // C. Connect the Floating Action Button to the Overlay
   if (typeof initFab === 'function') {
     initFab(overlayApi);
-    console.log('fab initialized');
   } else {
     console.error("initFab is not a function. Check your export in fab.js");
   }
