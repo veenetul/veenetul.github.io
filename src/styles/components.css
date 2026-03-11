@@ -60,6 +60,24 @@ body {
   gap: .4rem;
 }
 
+.education-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.education-header h2 {
+  margin: 0;
+}
+
+.school-favicon {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
 @media (hover:hover) {
   .shortcut-card:hover {
     transform: translateY(-1px);

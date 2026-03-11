@@ -66,12 +66,16 @@
 }
 
 @media (min-width: 720px) {
-  .shortcuts .shortcut-card {
-    float: left;
-    width: 260px;
-    margin-right: 1rem;
+  .shortcuts {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
   }
-  .shortcuts { overflow: hidden; }
+  
+  .shortcuts .shortcut-card {
+    flex: 1;
+    margin-bottom: 0;
+  }
 }
 
 /* Contact section centered styling on desktop */
