@@ -104,10 +104,6 @@ body {
 }
 
 .logo-card {
-  position: fixed;
-  top: 16px;
-  left: 16px;
-
   background: var(--primary);
   color: #1F1F1F;
   padding: .6rem .9rem;
@@ -116,8 +112,7 @@ body {
   display: flex;
   align-items: center;
   gap: .5rem;
-
-  z-index: 60;
+  width: fit-content;
 }
 
 .logo-card svg {
@@ -141,9 +136,7 @@ body {
   display: block;
 }
 
-.logo-signature + .hero {
-  padding-top: clamp(6rem, 13vw, 9rem);
-}
+
 
 
 /* Menun Hampurilaisnappi */
