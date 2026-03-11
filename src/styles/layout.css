@@ -69,7 +69,15 @@
   .shortcuts {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 1rem;
+  }
+
+  .shortcuts > h2 {
+    flex: 0 0 100%;
+    margin: 0;
+    padding: 0 var(--gap);
+    text-align: center;
   }
   
   .shortcuts .shortcut-card {
