@@ -57,6 +57,7 @@ body {
   color: var(--on);
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: .4rem;
 }
 
