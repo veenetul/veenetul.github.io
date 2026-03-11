@@ -72,6 +72,21 @@ body {
   margin: 0;
 }
 
+.contact-header {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.contact-header svg {
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+.contact-header h2 {
+  margin: 0;
+}
+
 .shortcut-card img.school-favicon {
   width: 25px;
   height: 25px;
