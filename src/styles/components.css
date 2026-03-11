@@ -107,6 +107,7 @@ body {
   background: var(--primary);
   color: #1F1F1F;
   padding: .6rem .9rem;
+  margin: 0;
 
   border-radius: var(--radius);
   display: flex;
