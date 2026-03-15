@@ -57,10 +57,10 @@ export function initOverlay({ onOpen, onClose, onSideSwitch } = {}) {
   // Clicking the 10% dead-space closes
   overlayDead.addEventListener('click', close);
 
-  // On desktop, clicking anywhere in the overlay except links or the side switch closes it.
+  // On desktop, clicking anywhere in the overlay except nav links closes it.
   overlay.addEventListener('click', (event) => {
     if (!window.matchMedia('(min-width: 1024px)').matches) return;
-    if (event.target.closest('.overlay-nav a, #switchSideBtn')) return;
+    if (event.target.closest('.overlay-nav a')) return;
     close();
   });
 
