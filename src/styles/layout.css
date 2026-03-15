@@ -158,7 +158,39 @@
   }
 
   .home-layout .home-projects,
-  .home-layout .home-cv,
+  .home-layout .home-cv {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-content: start;
+  }
+
+  .home-layout .home-projects > h2,
+  .home-layout .home-cv > h2,
+  .home-layout .home-projects > .section-title,
+  .home-layout .home-cv > .section-title {
+    text-align: center;
+  }
+
+  .home-layout .home-projects .shortcut-card,
+  .home-layout .home-cv .shortcut-card {
+    width: 100%;
+    max-width: none;
+    min-height: 148px;
+  }
+
+  .home-layout .home-projects .shortcut-body,
+  .home-layout .home-cv .shortcut-body {
+    height: 100%;
+  }
+
+  .home-layout .home-projects .shortcut-body h3,
+  .home-layout .home-cv .shortcut-body h2 {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
   .home-layout .home-contacts {
     display: flex;
     flex-wrap: wrap;
@@ -166,21 +198,10 @@
     gap: 1rem;
   }
 
-  .home-layout .home-projects > h2,
-  .home-layout .home-cv > h2,
   .home-layout .home-contacts > h2,
-  .home-layout .home-projects > .section-title,
-  .home-layout .home-cv > .section-title,
   .home-layout .home-contacts > .section-title {
     flex: 0 0 100%;
     text-align: center;
-  }
-
-  .home-layout .home-projects .shortcut-card,
-  .home-layout .home-cv .shortcut-card {
-    flex: 1 1 100%;
-    width: 100%;
-    max-width: none;
   }
 
   .home-layout .home-contacts .shortcut-card {

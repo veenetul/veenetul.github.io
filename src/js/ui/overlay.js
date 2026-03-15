@@ -57,6 +57,13 @@ export function initOverlay({ onOpen, onClose, onSideSwitch } = {}) {
   // Clicking the 10% dead-space closes
   overlayDead.addEventListener('click', close);
 
+  // On desktop, clicking anywhere in the overlay except links or the side switch closes it.
+  overlay.addEventListener('click', (event) => {
+    if (!window.matchMedia('(min-width: 1024px)').matches) return;
+    if (event.target.closest('.overlay-nav a, #switchSideBtn')) return;
+    close();
+  });
+
   // Tapping the panel background closes it, but preserve menu links and controls.
   overlaySurface.addEventListener('click', (event) => {
     const interactiveTarget = event.target.closest('a, button, input, select, textarea, [tabindex]');
