@@ -151,14 +151,14 @@
     gap: 1.25rem;
   }
 
-  .home-layout .shortcuts .shortcut-card {
-    width: 100%;
-    max-width: 280px;
-    justify-self: center;
+  .home-layout .shortcuts[aria-label="Esitellyt projektit"] {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .home-layout .shortcuts[aria-label="Esitellyt projektit"] {
-    grid-template-columns: 1fr;
+  .home-layout .shortcuts[aria-label="Esitellyt projektit"] .shortcut-card {
+    grid-column: 2 / 4;
+    width: 100%;
+    justify-self: stretch;
   }
 
   .home-layout .shortcuts[aria-label="CV-osiot"] {
