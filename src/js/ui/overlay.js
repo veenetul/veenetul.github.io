@@ -57,6 +57,13 @@ export function initOverlay({ onOpen, onClose, onSideSwitch } = {}) {
   // Clicking the 10% dead-space closes
   overlayDead.addEventListener('click', close);
 
+  // Tapping the panel background closes it, but preserve menu links and controls.
+  overlaySurface.addEventListener('click', (event) => {
+    const interactiveTarget = event.target.closest('a, button, input, select, textarea, [tabindex]');
+    if (interactiveTarget) return;
+    close();
+  });
+
   // ESC to close
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && isOpen()) close();
