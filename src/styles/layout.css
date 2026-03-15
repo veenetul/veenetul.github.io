@@ -176,14 +176,11 @@
     text-align: center;
   }
 
-  .home-layout .home-projects .shortcut-card {
-    flex: 0 1 320px;
-    max-width: 360px;
-  }
-
+  .home-layout .home-projects .shortcut-card,
   .home-layout .home-cv .shortcut-card {
     flex: 1 1 100%;
-    max-width: 460px;
+    width: 100%;
+    max-width: none;
   }
 
   .home-layout .home-contacts .shortcut-card {

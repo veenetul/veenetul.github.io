@@ -270,7 +270,17 @@ body.overlay-left .overlay-surface {
 }
 
 @media (min-width:1024px) {
-  .overlay-surface { flex-basis: min(38vw, 600px); }
+  .overlay {
+    --overlay-dead: 0px;
+  }
+
+  .overlay-dead {
+    flex-basis: 0;
+  }
+
+  .overlay-surface {
+    flex-basis: min(38vw, 600px);
+  }
 }
 
 /* Overlay Header */
